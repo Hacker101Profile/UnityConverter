@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UnityConvert – Support &amp; Privacy</title>
+<meta name="description" content="Support and privacy policy for UnityConvert, the offline unit converter for iPhone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEEDE7;
+    --card: #FBFAF6;
+    --ink: #1C1C18;
+    --muted: #6B6A63;
+    --line: #DAD8CF;
+    --orange: #B05420;
+    --teal: #16767E;
+    --purple: #6850C4;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #191917;
+      --card: #23231F;
+      --ink: #EDECE6;
+      --muted: #A3A299;
+      --line: #36352F;
+      --orange: #E07A43;
+      --teal: #3FB0B8;
+      --purple: #9B87EA;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.6 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--orange); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible, .button:focus-visible {
+    outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header { padding: 22px 0; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .wordmark { font: 600 20px var(--mono); color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+  nav { display: flex; gap: 22px; }
+  nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 16px; }
+  nav a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { padding-top: 48px; padding-bottom: 40px; }
+  .identity { display: flex; align-items: center; gap: 22px; }
+  .icon {
+    width: 96px; height: 96px; border-radius: 22px; flex: none;
+    box-shadow: 0 1px 0 var(--line), 0 10px 24px -12px rgba(60,45,20,.35);
+  }
+  .icon-fallback {
+    display: none; place-items: center;
+    background: var(--card); border: 1px solid var(--line);
+    font: 600 46px var(--mono); color: var(--orange);
+  }
+  h1 { font-size: 44px; line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 6px; }
+  .lede { margin: 0; color: var(--muted); font-size: 19px; max-width: 34ch; }
+
+  /* Symbol strip: the one memorable element, echoing the app's tiles */
+  .symbols {
+    list-style: none; padding: 0; margin: 40px 0 36px;
+    display: grid; grid-template-columns: repeat(9, 1fr); gap: 8px;
+  }
+  .symbols li {
+    aspect-ratio: 3 / 4;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 10px 10px 9px; min-width: 0; overflow: hidden;
+  }
+  .symbols b { font: 600 clamp(20px, 4.4vw, 34px)/1 var(--mono); }
+  .symbols span { font-size: 11px; color: var(--muted); line-height: 1.2; }
+  .symbols i { display: block; width: 14px; height: 3px; border-radius: 2px; margin-bottom: 5px; }
+  .o b { color: var(--orange); } .o i { background: var(--orange); }
+  .t b { color: var(--teal); }   .t i { background: var(--teal); }
+  .p b { color: var(--purple); } .p i { background: var(--purple); }
+  @media (max-width: 640px) {
+    .symbols { grid-template-columns: repeat(5, 1fr); }
+    .symbols li:nth-child(n+6) { display: none; }
+    .symbols li { padding: 8px 7px 7px; }
+    .symbols span { font-size: 10px; }
+    h1 { font-size: 36px; }
+    .icon { width: 76px; height: 76px; border-radius: 18px; }
+  }
+
+  .button {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--ink); color: var(--paper);
+    padding: 13px 22px; border-radius: 999px;
+    text-decoration: none; font-weight: 600;
+  }
+  .button:hover { opacity: .88; }
+  .contact-note { color: var(--muted); margin: 12px 0 0; font-size: 15px; }
+
+  /* Sections */
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; letter-spacing: -0.02em; margin: 0 0 18px; }
+  h3 { font-size: 19px; margin: 32px 0 6px; }
+  p, li { max-width: 68ch; }
+
+  details { border-bottom: 1px solid var(--line); }
+  details:first-of-type { border-top: 1px solid var(--line); }
+  summary {
+    cursor: pointer; list-style: none; padding: 16px 32px 16px 0;
+    font-weight: 600; position: relative;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; position: absolute; right: 4px; top: 13px;
+    font: 500 22px var(--mono); color: var(--muted);
+  }
+  details[open] summary::after { content: "−"; }
+  details p { margin: 0 0 18px; color: var(--muted); }
+
+  .updated { color: var(--muted); font-size: 15px; margin-top: -8px; }
+  address { font-style: normal; line-height: 1.5; }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="#">UnityConvert</a>
+    <nav aria-label="Main">
+      <a href="#support">Support</a>
+      <a href="#privacy">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="identity">
+      <img class="icon" src="icon.png" alt="UnityConvert app icon"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+      <div class="icon icon-fallback" aria-hidden="true">U</div>
+      <div>
+        <h1>UnityConvert</h1>
+        <p class="lede">Every unit you need, right at your fingertips. Works fully offline.</p>
+      </div>
+    </div>
+
+    <ul class="symbols" aria-label="Examples of converters in the app">
+      <li class="t"><b>p</b><span><i></i>Pressure</span></li>
+      <li class="t"><b>Q</b><span><i></i>Liquid flow</span></li>
+      <li class="o"><b>L</b><span><i></i>Length</span></li>
+      <li class="t"><b>ρ</b><span><i></i>Density</span></li>
+      <li class="o"><b>T</b><span><i></i>Temp.</span></li>
+      <li class="p"><b>τ</b><span><i></i>Torque</span></li>
+      <li class="o"><b>m</b><span><i></i>Mass</span></li>
+      <li class="p"><b>μ</b><span><i></i>Viscosity</span></li>
+      <li class="o"><b>V</b><span><i></i>Volume</span></li>
+    </ul>
+
+    <a class="button" href="mailto:akrat2720@gmail.com?subject=UnityConvert%20support">
+      <span aria-hidden="true">✉</span> Email support
+    </a>
+    <p class="contact-note">akrat2720@gmail.com · I usually reply within a few days.</p>
+  </div>
+
+  <section id="support">
+    <div class="wrap">
+      <h2>Support</h2>
+
+      <details>
+        <summary>How do I change my profile?</summary>
+        <p>Tap the profile button in the top-left corner of the main screen (it shows your current profile, for example “Engineer”). Choose Engineer, Student, Craftsperson or Everyday. Your profile decides which converters appear under Main and which units each converter lists first. You can switch at any time.</p>
+      </details>
+
+      <details>
+        <summary>Where are the converters that aren’t on my Main screen?</summary>
+        <p>Switch to the All tab at the top of the main screen. It shows every converter in the app, grouped by type. You can also tap the search button and type the name of what you want to convert, such as “area” or “pressure”.</p>
+      </details>
+
+      <details>
+        <summary>How do I get more or fewer decimals in my results?</summary>
+        <p>Open the profile screen and choose 4, 6, 8 or 10 significant digits at the bottom. Use fewer for quick estimates and more when you need exact values.</p>
+      </details>
+
+      <details>
+        <summary>Does UnityConvert need an internet connection?</summary>
+        <p>No. Every conversion runs on your device, so the app works the same on a plane, in a workshop or anywhere without signal.</p>
+      </details>
+
+      <details>
+        <summary>I found a wrong result, or I’m missing a unit</summary>
+        <p>Please email <a href="mailto:akrat2720@gmail.com?subject=UnityConvert%20feedback">akrat2720@gmail.com</a>. Include the converter, the value you entered, the units you converted between and the result you expected. For a missing unit, tell me which converter it belongs in.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Privacy Policy</h2>
+      <p class="updated">Last updated: October 1, 2026</p>
+
+      <p>This privacy policy explains how Ask Krat (“I”, “me”) handles information in the UnityConvert app for iPhone (“the app”).</p>
+
+      <h3>The short version</h3>
+      <p>UnityConvert does not collect, store or share any personal information. The app has no account, no tracking and no analytics, and it does not need an internet connection.</p>
+
+      <h3>Information the app uses</h3>
+      <p>The app only stores your settings, such as your chosen profile and number of significant digits. These are saved on your device and are never sent to me or to anyone else. All conversions are calculated on your device.</p>
+
+      <h3>Information you send me</h3>
+      <p>If you email me for support, I receive your email address and whatever you write. I use it only to answer you and to improve the app. I don’t share it with anyone, and I delete it when it’s no longer needed. You can ask me to delete it at any time.</p>
+
+      <h3>Apple</h3>
+      <p>The app is distributed through the App Store. Apple may collect information under its own privacy policy, for example when you download the app or if you choose to share crash reports with developers. I only see anonymous crash reports and usage statistics that Apple provides in aggregate.</p>
+
+      <h3>Children</h3>
+      <p>The app does not collect information from anyone, including children.</p>
+
+      <h3>Your rights</h3>
+      <p>If you live in the EU, the UK or another region with data protection laws, you have the right to access, correct or delete personal information I hold about you. Because the app doesn’t collect any, this only applies to emails you have sent me. To make a request, email <a href="mailto:akrat2720@gmail.com">akrat2720@gmail.com</a>. You can also complain to your local data protection authority; in Denmark, that is Datatilsynet.</p>
+
+      <h3>Changes to this policy</h3>
+      <p>If this policy changes, I’ll update it on this page and change the date at the top.</p>
+
+      <h3>Contact</h3>
+      <p>Questions about this policy can be sent to <a href="mailto:akrat2720@gmail.com">akrat2720@gmail.com</a> or by post to:</p>
+      <address>
+        Coconut Inc.<br>
+        Granbakkevej 4<br>
+        3230 Græsted<br>
+        Denmark
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Ask Krat. UnityConvert is available on the App Store for iPhone.</div>
+</footer>
+
+</body>
+</html>
